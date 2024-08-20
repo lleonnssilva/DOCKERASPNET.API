@@ -25,7 +25,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t my-app:latest .
+        docker build -t meu-dotnet-app:latest .
 
     - name: Configure AWS CLI
       run: |
