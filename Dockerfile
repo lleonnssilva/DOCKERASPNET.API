@@ -8,10 +8,10 @@ ARG TARGETARCH
 ARG BUILDPLATFORM
 
 WORKDIR /src
-COPY ["SampleApi/SampleApi.csproj", "SampleApi/"]
+COPY ["DOCKERASPNET.API/DOCKERASPNET.API.csproj", "DOCKERASPNET.API/"]
 RUN dotnet restore "DOCKERASPNET.API/DOCKERASPNET.API.csproj"
 COPY . .
-WORKDIR "/src/SampleApi"
+WORKDIR "/src/DOCKERASPNET.API"
 RUN dotnet build "DOCKERASPNET.API.csproj" -c Release -o /app/build -a $TARGETARCH
 
 FROM build AS publish
