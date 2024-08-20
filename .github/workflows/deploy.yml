@@ -39,7 +39,7 @@ jobs:
 
     - name: Tag Docker image
       run: |
-        docker tag my-app:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/meu-dotnet-app:latest
+        docker tag meu-dotnet-app:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/meu-dotnet-app:latest
 
     - name: Push Docker image to ECR
       run: |
