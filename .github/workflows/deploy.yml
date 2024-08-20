@@ -53,3 +53,5 @@ jobs:
         cluster: ${{ secrets.ECS_CLUSTER }}
         image: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/meu-dotnet-app:latest
         region: ${{ secrets.AWS_REGION }}
+        desired-count: 1
+        wait-for-service-stability: true
