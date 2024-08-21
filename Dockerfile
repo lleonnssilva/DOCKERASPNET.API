@@ -32,7 +32,7 @@ EXPOSE 80
 # Usar a imagem base do .NET SDK para build
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["DOCKERASPNET.API/DOCKERASPNET.API.csproj", "."]
+COPY ["./DOCKERASPNET.API.csproj", "."]
 RUN dotnet restore "./DOCKERASPNET.API.csproj"
 COPY . .
 WORKDIR "/src/DOCKERASPNET.API"
